@@ -1,0 +1,31 @@
+<header>
+    <p>Showing 20 - from 125</p>
+
+    <div class="input select">
+        <i class="ph ph-faders-horizontal"></i>
+        <div>
+            <label for="type">Sort by</label>
+            <select name="price" id="price">
+                <option value="Featured" selected>Featured</option>
+            </select>
+        </div>
+        <i class="ph ph-caret-down"></i>
+    </div>
+</header>
+
+<main>
+    <app-item *ngFor="let item of items$ | async" [item]="item"/>
+</main>
+
+<footer>
+    <ul class="pagination">
+        <li class="page-item arrow"><i class="ph ph-caret-left"></i></li>
+        <li class="page-item">1</li>
+        <li class="page-item">2</li>
+        <li class="page-item">3</li>
+        <li class="page-item">4</li>
+        <li class="page-item">...</li>
+        <li class="page-item">11</li>
+        <li class="page-item arrow"><i class="ph ph-caret-right"></i></li>
+    </ul>
+</footer>

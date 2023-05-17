@@ -1,1 +1,123 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --primary: #303141;
+    --secondary: #39e29d;
+    --tertiary: #5762d5;
+    --text: white;
+    --secondary-text: lightgray;
+    --input: #4c608533;
+    --select: #4c6085;
+    --item-box: #4c608526;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(56, 58, 80, 0.9), rgb(56, 58, 80, 0.9)), url("assets/background.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button {
+    outline: none;
+    border: none;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border-radius: 0.5em;
+    padding-inline: 1.5em;
+    padding-block: 0.9em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.button i {
+    font-size: 1rem;
+}
+
+.button:hover {
+    background-color: #1ec884;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    background-color: var(--input);
+    border-radius: 0.5em;
+    height: 3.5em;
+}
+
+.input input, .input select {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    color: var(--text);
+    flex: 1;
+    appearance: none;
+    border: 0 0.5em 0.5em 0;
+    font-size: 0.9em;
+}
+
+.input input::placeholder {
+    color: var(--text);
+}
+
+.input i {
+    color: var(--text);
+    padding: 1em 1em;
+}
+
+.input div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-flow: column wrap;
+}
+
+.input label {
+    color: var(--secondary-text);
+    font-size: 0.7em;
+}
+
+.input.select i {
+    color: var(--secondary);
+}
+
+.input.select i:last-child {
+    color: var(--text);
+}
+
+.input.select {
+    width: 10em;
+}
+
+.input option {
+    width: 100%;
+    background-color: var(--select);
+    color: var(--text);
+}

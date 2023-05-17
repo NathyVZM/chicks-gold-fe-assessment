@@ -1,0 +1,146 @@
+:host {
+    flex: 1;
+    min-width: 12em;
+}
+
+.item {
+    background-color: var(--item-box);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-flow: column wrap;
+    border-radius: 0.5em;
+    padding: 1.5em;
+    gap: 1em;
+}
+
+#first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+#first > div {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-flow: column wrap;
+    gap: 0.4em;
+    height: 100%;
+}
+
+#first > div > p {
+    color: var(--text);
+    font-size: 0.7em;
+}
+
+#first > div p i {
+    color: var(--secondary);
+    font-size: 1rem;
+}
+
+#second {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+    gap: 1em;
+}
+
+#second img {
+    width: 3em;
+}
+
+#second > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+    gap: 0.5em;
+    color: var(--text);
+}
+
+#second > div > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+#second > div > div:first-child p {
+   font-size: 1em;
+}
+
+#second > div > div:first-child img {
+    width: 1.5em;
+}
+
+#second > div > div:nth-child(2) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    gap: 1em;
+}
+
+#second > div > div:nth-child(2) p {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+#second > div > p {
+    font-size: 0.7em;
+    color: var(--secondary-text);
+}
+
+#third {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.button {
+    background-color: var(--tertiary);
+    color: var(--text);
+    letter-spacing: normal;
+    width: 6.6em;
+    padding-block: 0;
+    height: 3.5em;
+}
+
+.button.details {
+    background-color: var(--item-box);
+    color: var(--secondary-text);
+}
+
+.button i {
+    background-color: hsl(235, 60%, 50%);
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.stock {
+    color: var(--secondary) !important;
+    border: 1px solid var(--secondary);
+    border-radius: 0.5em;
+    padding: 0.3em;
+    text-align: center;
+}
+
+.stepper {
+    background-color: var(--item-box);
+    width: 5em;
+    height: 3em;
+    color: var(--text);
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.discount {
+    font-weight: 400 !important;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    color: var(--secondary-text);
+}

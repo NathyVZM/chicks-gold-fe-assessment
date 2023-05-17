@@ -1,0 +1,42 @@
+<header>
+    <section id="header-first">
+        <img src="https://chicksgold.com/logo/chicks-logo-large.svg" alt="Logo">
+    </section>
+    <section id="header-second">
+        <ul>
+            <ng-container *ngIf="items$ as items">
+                <li class="nav-item" *ngFor="let item of items | async">
+                    <details (toggle)="toggleNavItem(item)">
+                        <summary>{{ item.label }} <i class="ph" [ngClass]="item.isOpened ? 'ph-caret-up' : 'ph-caret-down'"></i></summary>
+                        <ul class="dropdown">
+                            <li *ngFor="let link of item.items">{{ link }}</li>
+                        </ul>
+                    </details>
+                </li>
+            </ng-container>
+        </ul>
+    </section>
+    <section id="header-third">
+        <div>
+            <details (toggle)="toggleCurrency()">
+                <summary class="nav-item">USD <i class="ph" [ngClass]="isOpened ? 'ph-caret-up' : 'ph-caret-down'"></i></summary>
+                <ul class="dropdown" *ngIf="currencies$ as currencies">
+                    <li *ngFor="let currency of currencies | async" class="currency">
+                        <img [src]="currency.flag" [alt]="currency.label">
+                        <span>{{ currency.label }}</span>
+                    </li>
+                </ul>
+            </details>
+        </div>
+        <div>
+            <div id="cart">
+                <i class="ph-fill ph-shopping-cart"></i>
+                <p class="nav-item">Cart ( {{ 5 }} )</p>
+            </div>
+            <button class="button">
+                Sign in
+                <i class="ph-fill ph-user"></i>
+            </button>
+        </div>
+    </section>
+</header>

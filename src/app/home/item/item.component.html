@@ -1,0 +1,35 @@
+<div class="item">
+    <section id="first">
+        <div>
+            <p *ngIf="item.onSale"><i class="ph-fill ph-dot-outline"></i> On sale</p>
+            <p [ngSwitch]="item.onStock" class="stock">
+                <ng-container *ngSwitchCase="true">In stock</ng-container>
+                <ng-container *ngSwitchCase="false">No stock</ng-container>
+            </p>
+        </div>
+        <input type="number" min="1" class="stepper" value="1">
+    </section>
+
+    <section id="second">
+        <img [src]="item.image" [alt]="item.name">
+        <div>
+            <div>
+                <p>{{ item.name }}</p>
+                <img [src]="item.game" [alt]="item.name">
+            </div>
+            <div>
+                <p *ngIf="item.price && item.discount">{{ item.price / (1 + item.discount) | currency : 'USD' : 'symbol': '1.0-2' }}</p>
+                <p *ngIf="item.price" [ngClass]="{'discount': item.discount}">{{ item.price | currency : 'USD' : 'symbol': '1.0-2' }}</p>
+            </div>
+            <p>{{ item.description }}</p>
+        </div>
+    </section>
+
+    <section id="third">
+        <button type="button" class="button details">Details</button>
+        <button type="button" class="button">
+            Add
+            <i class="ph-fill ph-shopping-cart"></i>
+        </button>
+    </section>
+</div>

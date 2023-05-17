@@ -1,0 +1,60 @@
+main {
+    padding-block: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    width: 100%;
+    gap: 1em;
+}
+
+main > h2, .filters {
+    width: 70%;
+}
+
+main > h2 {
+    color: var(--text);
+    font-size: 2.5em;
+}
+
+.filters {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 1em;
+}
+
+.filters > section:first-child {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.filters > section:first-child > div {
+    flex: 1;
+}
+
+.filters > section:last-child {
+    flex: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.filters > section:last-child div:first-child {
+    flex: 1;
+    border-radius: 0.5em 0 0 0.5em;
+}
+
+.filters > section:last-child div:nth-child(2) {
+    border-radius: 0;
+}
+
+.filters > section:last-child div:last-child {
+    border-radius: 0 0.5em 0.5em 0;
+}
