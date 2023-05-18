@@ -1,9 +1,6 @@
 :host {
     flex: 1;
     min-width: 12em;
-}
-
-.item {
     background-color: var(--item-box);
     display: flex;
     justify-content: space-between;
@@ -110,9 +107,17 @@
     height: 3.5em;
 }
 
+.button:hover {
+    background-color: hsl(235, 60%, 50%);
+}
+
 .button.details {
     background-color: var(--item-box);
     color: var(--secondary-text);
+}
+
+.button.details:hover {
+    background-color: hsla(219, 27%, 30%, 0.149);
 }
 
 .button i {

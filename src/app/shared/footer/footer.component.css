@@ -1,0 +1,139 @@
+footer {
+    background-color: var(--primary);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+}
+
+a {
+    text-decoration: none;
+}
+
+#first {
+    background-color: #2b2c3c;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 2em;
+    padding: 2em 20em;
+    color: var(--secondary-text);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#second {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+    padding: 2em 20em;
+}
+
+#second > section:first-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 0.6em;
+    border-bottom: 2px solid rgb(73, 80, 119);
+    padding-bottom: 2em;
+}
+
+#second > section:last-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    gap: 7.5em;
+    padding-top: 3em;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+    gap: 1em;
+}
+
+.logo img {
+    width: 12em;
+}
+
+.logo a {
+    color: var(--text);
+    font-size: 0.8em;
+}
+
+.legal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+    gap: 1.5em;
+}
+
+.legal h3 {
+    color: var(--text);
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+}
+
+.legal ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+    list-style-type: none;
+    gap: 0.9em;
+}
+
+.legal ul li a {
+    color: rgb(133, 132, 148);
+    font-size: 0.9em;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 1em;
+}
+
+.rating div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.rating div img {
+    background-color: var(--secondary);
+    width: 1.2em;
+    height: 1.2em;
+    object-fit: contain;
+}
+
+.rating h3 {
+    font-size: 0.9em;
+    color: gray;
+}
+
+#third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    padding-block: 2em;
+}
+
+#third small {
+    text-align: center;
+    color: var(--secondary-text);
+    font-weight: 500;
+    font-size: 0.9em;
+}
