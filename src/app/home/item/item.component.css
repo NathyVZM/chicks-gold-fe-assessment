@@ -149,3 +149,18 @@
     text-decoration-color: red;
     color: var(--secondary-text);
 }
+
+@media screen and (orientation: portrait) {
+    #third {
+        gap: 0.5em;
+    }
+
+    .button {
+        flex: 1;
+        gap: 1em;
+    }
+
+    .button i {
+        padding: 0.5em 1em;
+    }
+}

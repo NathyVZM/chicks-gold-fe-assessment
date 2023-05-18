@@ -66,6 +66,15 @@ footer {
     color: var(--text);
     cursor: pointer;
     transition: all 0.2s ease;
+    font-size: 1em;
+}
+
+.mobile {
+    display: none;
+}
+
+.no-mobile {
+    display: flex;
 }
 
 .page-item.arrow {
@@ -74,4 +83,37 @@ footer {
 
 .page-item:hover {
     background-color: var(--tertiary);
+}
+
+@media screen and (orientation: portrait) {
+    :host {
+        width: 90%;
+        padding: 1.5em;
+    }
+
+    header p {
+        display: none;
+    }
+
+    header .input {
+        flex: 1;
+    }
+
+    .pagination {
+        width: 80%;
+    }
+
+    .page-item {
+        font-size: 0.8em;
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .no-mobile {
+        display: none;
+    }
 }

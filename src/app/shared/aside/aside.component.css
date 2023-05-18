@@ -1,0 +1,8 @@
+p {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary);
+    position: absolute;
+    left: -100vw;
+    transition: all 0.2s ease;
+}

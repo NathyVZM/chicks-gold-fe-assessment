@@ -11,7 +11,7 @@ header {
     height: 5em;
     border-bottom: 1px solid rgb(73, 80, 119);
     position: fixed;
-    top: 0;
+    top: 0em;
 }
 
 details summary::-webkit-details-marker,
@@ -32,6 +32,10 @@ details summary::marker {
 
 #header-first img {
     margin-bottom: 1rem;
+}
+
+#header-first i {
+    display: none;
 }
 
 #header-second {
@@ -169,4 +173,43 @@ details summary::marker {
 .currency span {
     color: var(--secondary-text);
     font-size: 0.9em;
+}
+
+@media screen and (orientation: portrait) {
+    header {
+        padding-inline: 1em;
+    }
+
+    #header-first {
+        gap: 1em;
+        border-right: none;
+        padding-right: 0;
+    }
+
+    #header-first i {
+        display: flex;
+        font-size: 1.1em;
+    }
+
+    #header-first img {
+        width: 7em;
+        margin-bottom: 0.7rem;
+    }
+
+    #header-second {
+        display: none;
+    }
+
+    #header-third > div:last-child {
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    #header-third details {
+        display: none;
+    }
+
+    #cart p {
+        display: none;
+    }
 }

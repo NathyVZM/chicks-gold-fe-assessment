@@ -18,7 +18,6 @@ main > h2 {
 }
 
 .filters {
-    /* background-color: aqua; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,15 +45,52 @@ main > h2 {
     flex-flow: row wrap;
 }
 
-.filters > section:last-child div:first-child {
+.filters > section:last-child > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.filters > section:last-child > div:first-child {
     flex: 1;
     border-radius: 0.5em 0 0 0.5em;
 }
 
-.filters > section:last-child div:nth-child(2) {
+.filters > section:last-child > div:last-child > div:first-child {
     border-radius: 0;
 }
 
-.filters > section:last-child div:last-child {
+.filters > section:last-child > div:last-child > div:last-child {
     border-radius: 0 0.5em 0.5em 0;
+}
+
+@media screen and (orientation: portrait) {
+    main > h2 {
+        font-size: 1.5em;
+        width: 90%;
+    }
+
+    .filters {
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-flow: column wrap;
+        width: 90%;
+    }
+
+    .filters > section:last-child {
+        width: 100%;
+    }
+
+    .filters > section:last-child > div:last-child {
+        width: 100%;
+    }
+
+    .filters > section:last-child .input:not(.select) {
+        width: 100%;
+    }
+
+    .input.select {
+        flex: 1;
+    }
 }

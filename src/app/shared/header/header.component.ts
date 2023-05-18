@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { CoreService } from 'src/app/core/core.service';
 import { Navigation } from 'src/app/core/models/navigation.model';
 import { CurrencyService } from 'src/app/core/services/currency.service';
 import { NavigationService } from 'src/app/core/services/navigation.service';
@@ -11,10 +12,12 @@ import { NavigationService } from 'src/app/core/services/navigation.service';
 export class HeaderComponent {
   currencyService = inject(CurrencyService)
   navigationService = inject(NavigationService)
+  coreService = inject(CoreService)
 
   currencies$ = this.currencyService.getCurrencies()
   items$ = this.navigationService.getNavigation()
   isOpened = false
+  
 
   toggleNavItem(item: Navigation) {
     item.isOpened = !item.isOpened
@@ -22,5 +25,9 @@ export class HeaderComponent {
 
   toggleCurrency() {
     this.isOpened = !this.isOpened
+  }
+
+  openSidebar() {
+    this.coreService.toggleSidebar(true)
   }
 }

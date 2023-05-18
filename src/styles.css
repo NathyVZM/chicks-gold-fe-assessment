@@ -30,6 +30,20 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: overlay;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary);
+    border-radius: 1em;
 }
 
 .button {
