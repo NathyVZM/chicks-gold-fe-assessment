@@ -7,7 +7,9 @@
                 <i class="ph-fill ph-sword"></i>
                 <select name="game" id="game">
                     <option value="" disabled selected>Select a game</option>
-                    <option value="Overwatch 2">Overwatch 2</option>
+                    <ng-container *ngIf="games$ as games">
+                        <option *ngFor="let game of games | async" [value]="game.id">{{ game.name }}</option>
+                    </ng-container>
                 </select>
                 <i class="ph ph-caret-down"></i>
             </div>
@@ -34,6 +36,12 @@
                         <label for="type">Item type</label>
                         <select name="price" id="price">
                             <option value="All" selected>All</option>
+                            <option value="Armour">Armour</option>
+                            <option value="Weapons">Weapons</option>
+                            <option value="Consumables">Consumables</option>
+                            <option value="Jewelry">Jewelry</option>
+                            <option value="Crafting Materials">Crafting Materials</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <i class="ph ph-caret-down"></i>

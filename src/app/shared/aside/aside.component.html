@@ -1,1 +1,15 @@
-<p [ngStyle]="{'left': isOpened ? '0em' : '-100vw'}">aside works!</p>
+<aside [ngStyle]="{'left': isOpened ? '0em' : '-100vw'}">
+    <button class="button" (click)="closeSidebar()">
+        <i class="ph ph-x"></i>
+        Menu
+    </button>
+
+    <ng-container *ngIf="navigation$ as navigation">
+        <details *ngFor="let item of navigation | async" (toggle)="toggleNavItem(item)">
+            <summary>{{ item.label }} <i class="ph" [ngClass]="item.isOpened ? 'ph-caret-up': 'ph-caret-down'"></i></summary>
+            <ul id="list">
+                <li *ngFor="let link of item.items">{{ link }}</li>
+            </ul>
+        </details>
+    </ng-container>
+</aside>

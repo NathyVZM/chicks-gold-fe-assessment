@@ -11,6 +11,10 @@
     gap: 3em;
 }
 
+select {
+    width: 100%;
+}
+
 header {
     width: 100%;
     display: flex;
@@ -85,7 +89,7 @@ footer {
     background-color: var(--tertiary);
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 1007px) {
     :host {
         width: 90%;
         padding: 1.5em;
@@ -115,5 +119,45 @@ footer {
 
     .no-mobile {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1008px) and (max-width: 1279px) {
+    :host {
+        width: 90%;
+    }
+
+    header p {
+        font-size: 0.9em;
+        color: var(--secondary-text);
+    }
+
+    .pagination {
+        width: 80%;
+    }
+
+    .page-item {
+        font-size: 0.8em;
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .no-mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+    :host {
+        width: 90%;
+    }
+
+    main::after {
+        content: "";
+        flex: 1.25;
     }
 }

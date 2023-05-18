@@ -17,6 +17,10 @@ main > h2 {
     font-size: 2.5em;
 }
 
+select {
+    width: 100%;
+}
+
 .filters {
     display: flex;
     justify-content: space-between;
@@ -65,7 +69,7 @@ main > h2 {
     border-radius: 0 0.5em 0.5em 0;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 1007px) {
     main > h2 {
         font-size: 1.5em;
         width: 90%;
@@ -92,5 +96,15 @@ main > h2 {
 
     .input.select {
         flex: 1;
+    }
+}
+
+@media screen and (min-width: 1008px) and (max-width: 1279px), (min-width: 1280px) and (max-width: 1440px) {
+    main > h2 {
+        width: 90%;
+    }
+
+    .filters {
+        width: 90%;
     }
 }

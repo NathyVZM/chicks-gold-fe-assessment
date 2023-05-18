@@ -1,8 +1,69 @@
-p {
+aside {
     width: 100vw;
     height: 100vh;
-    background-color: var(--primary);
-    position: absolute;
+    background-color: #2b2c3c;
+    position: fixed;
+    top: 0;
     left: -100vw;
     transition: all 0.2s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+}
+
+.button {
+    background-color: transparent;
+    color: var(--text);
+    justify-content: flex-start;
+    text-transform: none;
+    font-size: 0.9em;
+    font-weight: 400;
+    border-bottom: 2px solid rgb(73, 80, 119);
+    border-radius: 0;
+    padding: 1.5em;
+}
+
+.button:hover {
+    background-color: #20212d;
+}
+
+details {
+    color: var(--text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column wrap;
+    border-bottom: 2px solid rgb(73, 80, 119, 0.4);
+}
+
+details > summary {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 1.5em;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+ display: none; 
+ content: "";
+}
+
+#list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: column wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 1.5em;
+    background-color: #37384b;
+    gap: 1em;
+}
+
+#list li {
+    font-size: 0.8em;
 }

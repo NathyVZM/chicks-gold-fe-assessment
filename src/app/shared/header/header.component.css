@@ -175,7 +175,7 @@ details summary::marker {
     font-size: 0.9em;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 1007px) {
     header {
         padding-inline: 1em;
     }
@@ -189,6 +189,11 @@ details summary::marker {
     #header-first i {
         display: flex;
         font-size: 1.1em;
+    }
+
+    #header-first i:hover {
+        background-color: hsl(236, 15%, 12%);
+        border-radius: 50%;
     }
 
     #header-first img {
@@ -211,5 +216,59 @@ details summary::marker {
 
     #cart p {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1008px) and (max-width: 1279px) {
+    header {
+        padding-inline: 1em;
+    }
+
+    #header-first {
+        gap: 1em;
+        border-right: none;
+        padding-right: 0;
+    }
+
+    #header-first i {
+        display: flex;
+        font-size: 1.1em;
+    }
+
+    #header-first i:hover {
+        background-color: #1a1b23;
+        border-radius: 50%;
+    }
+
+    #header-first img {
+        width: 7em;
+        margin-bottom: 0.7rem;
+    }
+
+    #header-second {
+        display: none;
+    }
+
+    #header-third > div:last-child {
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+
+    #header-third details {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+    #header-first {
+        display: none;
+    }
+
+    #header-second {
+        padding-left: 0;
+    }
+
+    #header-third {
+        min-width: 25vw;
     }
 }

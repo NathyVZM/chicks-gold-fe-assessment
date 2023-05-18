@@ -24,6 +24,10 @@ a {
     font-size: 1em;
 }
 
+#first img {
+    width: 5em;
+}
+
 #second {
     display: flex;
     justify-content: flex-start;
@@ -94,6 +98,11 @@ a {
 .legal ul li a {
     color: rgb(133, 132, 148);
     font-size: 0.9em;
+    transition: all 0.2s ease;
+}
+
+.legal ul li a:hover {
+    text-decoration: underline;
 }
 
 .rating {
@@ -136,4 +145,119 @@ a {
     color: var(--secondary-text);
     font-weight: 500;
     font-size: 0.9em;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1007px) {
+    .no-mobile {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    #first {
+        padding: 1.5em;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    #first img {
+        width: 3em;
+    }
+
+    #second {
+        padding: 1.5em;
+    }
+
+    #second > section:first-child {
+        justify-content: center;
+        gap: 0.6em;
+        padding-bottom: 1.5em;
+    }
+    
+    #second > section:last-child {
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-flow: column wrap;
+        gap: 1.2em;
+        padding-top: 1.5em;
+    }
+
+    .logo {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 2em;
+        border-bottom: 2px solid rgb(73, 80, 119);
+    }
+
+    .legal {
+        border-bottom: 2px solid rgb(73, 80, 119);
+        padding-bottom: 1.2em;
+        color: var(--text);
+    }
+
+    .legal > summary {
+        font-size: 0.9em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+        padding-right: 0.5em;
+    }
+
+    .legal ul {
+        margin: 0;
+        padding: 0;
+        padding-block: 1.5em;
+    }
+
+    .legal ul li {
+        font-size: 0.9em;
+        color: var(--secondary-text);
+    }
+
+    .rating {
+        padding-top: 1.5em;
+        justify-content: center;
+        flex-flow: column-reverse wrap;
+        gap: 0.5em;
+    }
+
+    #third {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row wrap;
+        padding-block: 2em;
+    }
+}
+
+@media screen and (min-width: 1008px) and (max-width: 1279px) {
+    #first {
+        padding: 3em;
+    }
+
+    #second {
+        padding: 2em;
+    }
+
+    #second > section:last-child {
+        gap: 3.7em;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+    #first {
+        padding: 3em;
+    }
+
+    #second {
+        padding: 2em;
+    }
 }

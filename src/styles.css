@@ -31,6 +31,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: overlay;
+    position: relative;
 }
 
 body::-webkit-scrollbar {

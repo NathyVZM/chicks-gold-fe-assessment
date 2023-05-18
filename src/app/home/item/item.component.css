@@ -164,3 +164,22 @@
         padding: 0.5em 1em;
     }
 }
+
+@media screen and (max-width: 1279px), (min-width: 1280px) and (max-width: 1440px) {
+    :host {
+        min-width: 15em;
+    }
+
+    #third {
+        gap: 0.5em;
+    }
+
+    .button {
+        flex: 1;
+        gap: 0.5em;
+    }
+
+    .button i {
+        padding: 0.5em 1em;
+    }
+}

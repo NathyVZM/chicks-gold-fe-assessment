@@ -27,12 +27,18 @@
                 <img src="https://chicksgold.com/logo/chicks-logo-large.svg" alt="Logo">
                 <a href="mailto:support@chicksgold.com">support@chicksgold.com</a>
             </div>
-            <div *ngFor="let item of items$ | async" class="legal">
+            <div *ngFor="let item of items$ | async" class="legal no-mobile">
                 <h3>{{ item.label }}</h3>
                 <ul>
                     <li *ngFor="let link of item.items"><a href="/">{{ link }}</a></li>
                 </ul>
             </div>
+            <details *ngFor="let item of items$ | async" class="legal mobile" (toggle)="toggleDropdown(item)">
+                <summary>{{ item.label }} <i class="ph" [ngClass]="item.isOpened ? 'ph-caret-up' : 'ph-caret-down'"></i></summary>
+                <ul>
+                    <li *ngFor="let link of item.items">{{ link }}</li>
+                </ul>
+            </details>
             <div class="rating">
                 <div>
                     <img src="https://chicksgold.com/home/star_full.svg" alt="">
