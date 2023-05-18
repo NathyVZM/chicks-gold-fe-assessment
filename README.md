@@ -1,6 +1,47 @@
-# ChicksGoldFeAssessment
+# Chicks Gold - FE Assessment
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+
+In order to run this project, Node.js (`v^18.16.0`) must be installed. This can be done by downloading the executable through the [official website](https://nodejs.org) or using NVM (*Node Version Manager*) ([Windows](https://github.com/coreybutler/nvm-windows), [macOS/Linux](https://github.com/coreybutler/nvm-windows)), in case another version of Node.js is installed in the computer.
+
+To install the aforementioned version with NVM, run the following commands in the CMD/console of preference:
+
+### Windows/macOs/Linux
+
+```
+nvm install 18.16.0
+nvm use 18.16.0
+```
+
+To check if Node.js was correctly installed, run the following commands. If the installation was completed successfully, then the version of Node.js and NPM should be seen in the console.
+
+```
+node -v
+npm -v
+```
+
+Once the repository is cloned, locate into the root folder of the project and install the dependencies using the next command:
+```
+npm i
+```
+Or
+```
+npm install
+```
+
+To run the Angular development server, use the following command and navigate to `http://localhost:4200` with the browser of preference in order the view the application:
+```
+ng s
+```
+Or
+```
+ng serve
+```
+<br>
+
+---
+
+<br>
 
 ## Development server
 
