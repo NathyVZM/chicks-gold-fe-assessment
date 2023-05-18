@@ -1,6 +1,7 @@
 :host {
     flex: 1;
     min-width: 12em;
+    min-height: 20em;
     background-color: var(--item-box);
     display: flex;
     justify-content: space-between;
