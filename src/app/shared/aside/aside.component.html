@@ -5,7 +5,7 @@
     </button>
 
     <ng-container *ngIf="navigation$ as navigation">
-        <details *ngFor="let item of navigation | async" (toggle)="toggleNavItem(item)">
+        <details *ngFor="let item of navigation | async" (toggle)="toggleNavItem(item)" #details>
             <summary>{{ item.label }} <i class="ph" [ngClass]="item.isOpened ? 'ph-caret-up': 'ph-caret-down'"></i></summary>
             <ul id="list">
                 <li *ngFor="let link of item.items">{{ link }}</li>

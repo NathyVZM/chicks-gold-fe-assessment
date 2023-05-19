@@ -1,4 +1,4 @@
-import { Component, DestroyRef, OnInit, inject } from '@angular/core';
+import { Component, DestroyRef, ElementRef, OnInit, QueryList, ViewChildren, inject } from '@angular/core';
 import { CoreService } from 'src/app/core/core.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { NavigationService } from 'src/app/core/services/navigation.service';
@@ -10,6 +10,8 @@ import { Navigation } from 'src/app/core/models/navigation.model';
   styleUrls: ['./aside.component.css']
 })
 export class AsideComponent implements OnInit {
+  @ViewChildren('details') details!: QueryList<ElementRef>
+
   coreService = inject(CoreService)
   navigationService = inject(NavigationService)
 
@@ -29,5 +31,7 @@ export class AsideComponent implements OnInit {
 
   closeSidebar() {
     this.coreService.toggleSidebar(false)
+    const detailsList = this.details.toArray()
+    detailsList.forEach(d => d.nativeElement.open = false)
   }
 }

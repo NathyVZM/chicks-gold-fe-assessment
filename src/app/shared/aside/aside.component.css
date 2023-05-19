@@ -1,6 +1,7 @@
 aside {
     width: 100vw;
     height: 100vh;
+    overflow-y: scroll;
     background-color: #2b2c3c;
     position: fixed;
     top: 0;
@@ -9,7 +10,7 @@ aside {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    flex-flow: column wrap;
+    flex-flow: column;
 }
 
 .button {
